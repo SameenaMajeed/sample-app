@@ -1,0 +1,56 @@
+[
+    {
+        "id": "sd_I2ucdXpbv9PjHlj4",
+        "type": "tab",
+        "createdDate": "2026-04-24T06:50:58.713Z",
+        "label": "Loginpage",
+        "disabled": false,
+        "info": "",
+        "functionSeq": 0,
+        "generateNext": true,
+        "serviceName": "LoginpageComponent"
+    },
+    {
+        "id": "sd_DdFUcBMWh0S1zCsw",
+        "type": "OnInit",
+        "z": "sd_I2ucdXpbv9PjHlj4",
+        "viewType": "common",
+        "nodeType": "start",
+        "name": "",
+        "functionName": "sd_DdFUcBMWh0S1zCsw",
+        "category": "Lifecycle Events",
+        "x": 30,
+        "y": 30,
+        "wires": [
+            [
+                "sd_cmHJARbiTg1iUWTN"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "LoginpageComponent"
+    },
+    {
+        "id": "sd_cmHJARbiTg1iUWTN",
+        "type": "PageVariables",
+        "z": "sd_I2ucdXpbv9PjHlj4",
+        "viewType": "pages",
+        "nodeType": "flow",
+        "name": "",
+        "inputs": 1,
+        "outputs": 1,
+        "operation": "set",
+        "globalVariables": [],
+        "functionName": "sd_cmHJARbiTg1iUWTN",
+        "category": "Function",
+        "x": 180,
+        "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "LoginpageComponent",
+        "generated": true
+    }
+]

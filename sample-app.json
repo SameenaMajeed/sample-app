@@ -1,0 +1,13 @@
+{
+    "displayName": "sample-app",
+    "appName": "sample-app",
+    "description": "sample-app",
+    "lastModified": "2026-04-24T06:49:27.975Z",
+    "imgSourcePath": "",
+    "version": "1.0.0",
+    "appType": "uiOnly",
+    "templateName": "blank",
+    "createDate": "2026-04-24T06:49:26.088Z",
+    "analyticsId": "745e2c80-4f1e-1980-027d-b4426b17afc6",
+    "createdStudioVersion": "9.3.0"
+}
