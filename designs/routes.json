@@ -1,14 +1,18 @@
 {
     "routes": [
         {
-            "path": "home",
+            "path": "login",
             "component": "LoginpageComponent"
         },
         {
             "path": "''",
-            "redirectTo": "home",
+            "redirectTo": "login",
             "pathMatch": "full",
             "default": true
+        },
+        {
+            "path": "home",
+            "component": "HomepageComponent"
         },
         {
             "path": "**",

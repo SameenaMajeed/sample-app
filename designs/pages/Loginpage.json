@@ -40,11 +40,58 @@
         "inputs": 1,
         "outputs": 1,
         "operation": "set",
-        "globalVariables": [],
+        "globalVariables": [
+            {
+                "id": "sv_loginForm",
+                "name": "loginForm",
+                "type": "FormGroup",
+                "defaultValue": "null",
+                "description": "Validation Form Group"
+            }
+        ],
         "functionName": "sd_cmHJARbiTg1iUWTN",
         "category": "Function",
         "x": 180,
         "y": 30,
+        "wires": [
+            []
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": false,
+        "serviceName": "LoginpageComponent",
+        "generated": true
+    },
+    {
+        "id": "sd_BjtU2BvL5w8Lz9y1",
+        "type": "PageStart",
+        "z": "sd_I2ucdXpbv9PjHlj4",
+        "viewType": "pages",
+        "nodeType": "start",
+        "name": "onSubmit",
+        "functionName": "onSubmit",
+        "category": "Function",
+        "x": 30,
+        "y": 120,
+        "wires": [
+            [
+                "sd_H5uK2LwM6z7P1q3"
+            ]
+        ],
+        "__n_excludedFromValidation__": {},
+        "generateNext": true,
+        "serviceName": "LoginpageComponent"
+    },
+    {
+        "id": "sd_H5uK2LwM6z7P1q3",
+        "type": "Navigation",
+        "z": "sd_I2ucdXpbv9PjHlj4",
+        "viewType": "common",
+        "nodeType": "flow",
+        "name": "",
+        "path": "/home",
+        "category": "Navigation",
+        "x": 180,
+        "y": 120,
         "wires": [
             []
         ],

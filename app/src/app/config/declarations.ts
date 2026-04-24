@@ -16,6 +16,8 @@ window['neutrinos'] = {
 };
 
 //CORE_REFERENCE_IMPORTS
+//CORE_REFERENCE_IMPORT-HomepageComponent
+import { HomepageComponent } from '../components/Homepage.component';
 //CORE_REFERENCE_IMPORT-LoginpageComponent
 import { LoginpageComponent } from '../components/Loginpage.component';
 
@@ -50,6 +52,8 @@ export const appDeclarations = [
   PageNotFoundComponent,
   ArtImgSrcDirective,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY
+  //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-HomepageComponent
+  HomepageComponent,
   //CORE_REFERENCE_PUSH_TO_DEC_ARRAY-LoginpageComponent
   LoginpageComponent,
 ];
@@ -77,8 +81,9 @@ export const appProviders = [
 
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_START
 export const appRoutes = [
-  { path: 'home', component: LoginpageComponent },
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'login', component: LoginpageComponent },
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: 'home', component: HomepageComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 // CORE_REFERENCE_PUSH_TO_ROUTE_ARRAY_END

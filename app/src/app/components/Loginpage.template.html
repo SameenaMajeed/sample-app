@@ -2,18 +2,26 @@
   <h2>Welcome Back</h2>
   <p>Don&apos;t have an account? <b>Sign up</b></p>
   
-  <form>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
-      <label>Email Address</label>
-      <input type="email" class="input" placeholder="name@company.com">
+      <label [class.error-label]="loginForm.get('email').invalid && loginForm.get('email').touched">Email Address</label>
+      <input type="email" class="input" placeholder="name@company.com" formControlName="email"
+             [class.error-border]="loginForm.get('email').invalid && loginForm.get('email').touched">
+      <small class="error-msg" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+        Please enter a valid email address.
+      </small>
     </div>
 
     <div class="form-group">
-      <label>Password</label>
-      <input type="password" class="input" placeholder="••••••••">
+      <label [class.error-label]="loginForm.get('password').invalid && loginForm.get('password').touched">Password</label>
+      <input type="password" class="input" placeholder="••••••••" formControlName="password"
+             [class.error-border]="loginForm.get('password').invalid && loginForm.get('password').touched">
+      <small class="error-msg" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+        Password must be at least 6 characters.
+      </small>
     </div>
 
-    <button type="submit" class="button">Sign In</button>
+    <button type="submit" class="button" [disabled]="loginForm.invalid && loginForm.touched">Sign In</button>
   </form>
 
   <div class="divider">OR</div>

@@ -4,39 +4,27 @@
 //append_imports_start
 
 import { Component, Injector } from '@angular/core'; //_splitter_
-import { FormBuilder, Validators, FormGroup } from '@angular/forms'; //_splitter_
-import { Router } from '@angular/router'; //_splitter_
 import { SDPageCommonService } from 'app/n-services/sd-page-common.service'; //_splitter_
 import { SDBaseService } from 'app/n-services/SDBaseService'; //_splitter_
 import { NeuServiceInvokerService } from 'app/n-services/service-caller.service'; //_splitter_
 //append_imports_end
 
 @Component({
-  selector: 'bh-Loginpage',
-  templateUrl: './Loginpage.template.html',
+  selector: 'bh-Homepage',
+  templateUrl: './Homepage.template.html',
   providers: [
     //appendnew_element_providers
   ],
 })
-export class LoginpageComponent {
+export class HomepageComponent {
   page: any = { dep: {} };
-  loginForm: FormGroup;
-
   constructor(
     private __page_injector__: Injector,
     private sdService: SDBaseService,
-    public __serviceInvoker__: NeuServiceInvokerService,
-    private fb: FormBuilder,
-    private router: Router
+    public __serviceInvoker__: NeuServiceInvokerService
   ) {
     this.__page_injector__.get(SDPageCommonService).addPageDefaults(this.page);
     this.registerListeners();
-    this.page.dep.FormBuilder = this.fb; 
-    
-    this.loginForm = this.fb.group({
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required, Validators.minLength(6)]]
-    });
     //appendnew_element_inject
   }
 
@@ -45,16 +33,7 @@ export class LoginpageComponent {
       .get(SDPageCommonService)
       .constructFlowObject(this);
     {
-      this.sd_DdFUcBMWh0S1zCsw(bh);
-    }
-  }
-
-  onSubmit() {
-    if (this.loginForm.valid) {
-      console.log('Form Submitted', this.loginForm.value);
-      this.router.navigate(['/home']);
-    } else {
-      this.loginForm.markAllAsTouched();
+      this.sd_Eih378CqoJdlaiIV(bh);
     }
   }
 
@@ -66,24 +45,24 @@ export class LoginpageComponent {
     //append_listeners
   }
 
-  sd_DdFUcBMWh0S1zCsw(bh) {
+  sd_Eih378CqoJdlaiIV(bh) {
     try {
-      bh = this.sd_cmHJARbiTg1iUWTN(bh);
-      //appendnew_next_sd_DdFUcBMWh0S1zCsw
+      bh = this.sd_Vzhv8FY3eq7nfhHO(bh);
+      //appendnew_next_sd_Eih378CqoJdlaiIV
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_DdFUcBMWh0S1zCsw');
+      return this.errorHandler(bh, e, 'sd_Eih378CqoJdlaiIV');
     }
   }
 
-  //appendnew_flow_LoginpageComponent_start
+  //appendnew_flow_HomepageComponent_start
 
-  sd_cmHJARbiTg1iUWTN(bh) {
+  sd_Vzhv8FY3eq7nfhHO(bh) {
     try {
-      //appendnew_next_sd_cmHJARbiTg1iUWTN
+      //appendnew_next_sd_Vzhv8FY3eq7nfhHO
       return bh;
     } catch (e) {
-      return this.errorHandler(bh, e, 'sd_cmHJARbiTg1iUWTN');
+      return this.errorHandler(bh, e, 'sd_Vzhv8FY3eq7nfhHO');
     }
   }
 
@@ -103,5 +82,5 @@ export class LoginpageComponent {
     bh.errorSource = src;
     throw e;
   }
-  //appendnew_flow_LoginpageComponent_Catch
+  //appendnew_flow_HomepageComponent_Catch
 }
